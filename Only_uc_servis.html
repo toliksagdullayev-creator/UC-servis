@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Only UC Shop — PUBG Mobile UC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF3F1;--panel:#fff;--line:#C9DAD6;--text:#0E2326;--muted:#4D6B68;--gold:#8A5A00;--sel:#FBEFD0;--cta:#0E2326;--ctatext:#fff;--field:#F6FAF9;--coin:#F0B429;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E2326;--panel:#153337;--line:#2A5155;--text:#EAF1EE;--muted:#93B3AF;--gold:#F0B429;--sel:rgba(240,180,41,.14);--cta:#F0B429;--ctatext:#0E2326;--field:#0E2326;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0E2326;--panel:#153337;--line:#2A5155;--text:#EAF1EE;--muted:#93B3AF;--gold:#F0B429;--sel:rgba(240,180,41,.14);--cta:#F0B429;--ctatext:#0E2326;--field:#0E2326;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.6 Manrope,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coin);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;font:700 1rem Unbounded,Manrope,sans-serif;text-decoration:none}
+.coin{width:26px;height:26px;border-radius:50%;background:var(--coin);box-shadow:inset 0 0 0 4px rgba(0,0,0,.14)}
+header a.admin{font-weight:600;font-size:.9rem;color:var(--muted)}
+.hero{display:grid;gap:32px;padding:24px 0 56px}
+h1{font:700 clamp(1.8rem,5.4vw,3rem)/1.12 Unbounded,Manrope,sans-serif;margin:0 0 16px;letter-spacing:-.01em}
+.lead{color:var(--muted);max-width:46ch;margin:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}
+.card h2{font:700 1rem Unbounded,Manrope,sans-serif;margin:0 0 14px}
+.packs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:18px}
+.pack{font:inherit;color:inherit;text-align:left;background:var(--field);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;cursor:pointer;display:flex;flex-direction:column;gap:2px;transition:border-color .15s,background .15s}
+.pack strong{font:700 1rem Unbounded,Manrope,sans-serif}
+.pack span{font-size:.85rem;color:var(--muted)}
+.pack[aria-checked="true"]{border-color:var(--coin);background:var(--sel)}
+label{display:block;font-weight:800;font-size:.9rem;margin-bottom:6px}
+input{width:100%;font:600 1.05rem Manrope,sans-serif;color:var(--text);background:var(--field);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px}
+input[aria-invalid="true"]{border-color:#D14B3C}
+#hint{font-size:.85rem;color:var(--muted);margin:6px 0 0}
+.total{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:22px 0 16px;border-top:1px dashed var(--line);padding-top:18px}
+.big{font:700 clamp(2.2rem,9vw,3.4rem)/1 Unbounded,Manrope,sans-serif;color:var(--gold)}
+.big small{font-size:.4em;margin-left:6px}
+.price{text-align:right;font-weight:800}
+.price span{display:block;font-weight:400;font-size:.8rem;color:var(--muted)}
+.cta{display:block;text-align:center;text-decoration:none;font-weight:800;background:var(--cta);color:var(--ctatext);border-radius:12px;padding:15px 18px}
+.cta[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
+section{padding:8px 0 48px}
+h3{font:700 1.25rem Unbounded,Manrope,sans-serif;margin:0 0 20px}
+ol{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px}
+ol li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px 16px 62px;position:relative}
+ol li::before{content:counter(s);position:absolute;left:18px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--coin);color:#0E2326;font:700 .9rem/30px Unbounded,sans-serif;text-align:center}
+ol b{display:block}
+ol span{color:var(--muted);font-size:.95rem}
+details{border-bottom:1px solid var(--line);padding:14px 0}
+summary{cursor:pointer;font-weight:800}
+details p{margin:8px 0 0;color:var(--muted);max-width:60ch}
+footer{border-top:1px solid var(--line);padding:24px 0 36px;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+@media (min-width:860px){.hero{grid-template-columns:1.05fr 1fr;align-items:center;gap:56px;padding-top:48px}.packs{grid-template-columns:repeat(3,1fr)}ol{grid-template-columns:repeat(3,1fr)}}
+@media (prefers-reduced-motion:reduce){.pack{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="#"><span class="coin" aria-hidden="true"></span>Only UC Shop</a>
+    <a class="admin" href="https://t.me/Only_Uc_ADMIN" target="_blank" rel="noopener">Admin: @Only_Uc_ADMIN</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>PUBG Mobile UC: Toʻlang, UC hisobingizga oʻzi tushadi</h1>
+        <p class="lead">Paketni tanlang, Player ID’ingizni kiriting va buyurtmani Telegram botda yakunlang. Toʻlov tasdiqlangach UC avtomatik yuboriladi.</p>
+      </div>
+
+      <div class="card">
+        <h2>Buyurtma</h2>
+        <div class="packs" id="packs" role="radiogroup" aria-label="UC paketi"></div>
+        <label for="pid">Player ID</label>
+        <input id="pid" inputmode="numeric" autocomplete="off" placeholder="Masalan, 5123456789" aria-describedby="hint" aria-invalid="false">
+        <p id="hint">PUBG Mobile profilingizdagi raqamli ID.</p>
+        <div class="total">
+          <div class="big" aria-live="polite"><span id="uc">660</span><small>UC</small></div>
+          <div class="price"><span>Narxi</span><b id="sum"></b></div>
+        </div>
+        <a class="cta" id="cta" href="#" target="_blank" rel="noopener">Telegramda buyurtma berish</a>
+      </div>
+    </div>
+
+    <section>
+      <h3>Qanday ishlaydi</h3>
+      <ol>
+        <li><b>Paket va ID</b><span>UC paketini tanlang va Player ID’ingizni kiriting.</span></li>
+        <li><b>Botda tasdiqlash</b><span>Telegram bot buyurtmani ochadi va toʻlov usulini koʻrsatadi.</span></li>
+        <li><b>UC tushadi</b><span>Toʻlov tasdiqlangach UC oʻyin hisobingizga avtomatik yuboriladi.</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h3>Savollar</h3>
+      <details><summary>UC qachon tushadi?</summary><p>Toʻlov tasdiqlangandan keyin UC avtomatik yuboriladi, kutish shart emas.</p></details>
+      <details><summary>ID’ni notoʻgʻri kiritsam-chi?</summary><p>Yuborishdan oldin ID’ni diqqat bilan tekshiring. Xato boʻlsa, darhol admin bilan bogʻlaning.</p></details>
+      <details><summary>Muammo boʻlsa kimga yozaman?</summary><p>Adminga Telegramda yozing: @Only_Uc_ADMIN.</p></details>
+    </section>
+  </main>
+
+  <footer>
+    <span>Only UC Shop</span>
+    <span><a href="https://t.me/only_tm_bot" target="_blank" rel="noopener">Telegram bot</a> &nbsp; <a href="https://t.me/Only_Uc_ADMIN" target="_blank" rel="noopener">Admin</a></span>
+  </footer>
+</div>
+
+<script>
+// Narxlarni shu yerda oʻzgartiring (soʻmda)
+const PACKS=[{uc:30,price:6000},{uc:60,price:12000},{uc:325,price:59000},{uc:660,price:120000},{uc:1800,price:290000},{uc:3850,price:600000},{uc:8100,price:1200000},{uc:16200,price:2350000},{uc:24300,price:3500000},{uc:32400,price:4650000},{uc:40500,price:5800000},{uc:48600,price:6950000},{uc:81000,price:11550000}];
+const BOT="only_tm_bot";
+let sel=2;
+const $=id=>document.getElementById(id);
+const fmt=n=>String(n).replace(/\B(?=(\d{3})+(?!\d))/g,"\u00A0");
+const packsEl=$("packs"),idEl=$("pid"),cta=$("cta");
+PACKS.forEach((p,i)=>{
+  const b=document.createElement("button");
+  b.type="button";b.className="pack";b.setAttribute("role","radio");
+  b.innerHTML="<strong>"+fmt(p.uc)+" UC</strong><span>"+fmt(p.price)+" soʻm</span>";
+  b.onclick=()=>{sel=i;update()};
+  packsEl.appendChild(b);
+});
+
+function update(){
+  const p=PACKS[sel],id=idEl.value.trim(),ok=/^\d{6,12}$/.test(id);
+  [...packsEl.children].forEach((b,i)=>b.setAttribute("aria-checked",i===sel));
+  $("uc").textContent=fmt(p.uc);
+  $("sum").textContent=fmt(p.price)+" soʻm";
+  idEl.setAttribute("aria-invalid",id&&!ok?"true":"false");
+  $("hint").textContent=id&&!ok?"ID faqat raqamlardan iborat, 10-11 ta belgi.":"PUBG Mobile profilingizdagi raqamli ID.";
+  cta.href=ok?"https://t.me/"+BOT+"?start=uc"+p.uc+"_"+id:"#";
+  cta.setAttribute("aria-disabled",ok?"false":"true");
+  try{localStorage.setItem("pid",id)}catch(e){}
+}
+cta.addEventListener("click",e=>{
+  if(cta.getAttribute("aria-disabled")==="true"){e.preventDefault();idEl.focus()}
+});
+idEl.addEventListener("input",update);
+try{idEl.value=localStorage.getItem("pid")||""}catch(e){}
+update();
+</script>
+</body>
+</html>
